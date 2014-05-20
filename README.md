@@ -1,2 +1,2 @@
-zrtlab-solr
-===========
+zrtlab-service-solr
+===================
