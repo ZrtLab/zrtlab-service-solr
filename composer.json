@@ -21,7 +21,7 @@
     "homepage": "https://github.com/zrtlab/zrtlab-service-solr",
     "license": "BSD-3-Clause",
     "require": {
-        "php": ">=5.2.11",
+        "php": ">=5.3.3",
         "bombayworks/zendframework1": "1.*",
         "solarium/solarium": "3.2.0"
     },
