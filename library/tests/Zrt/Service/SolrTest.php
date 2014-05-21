@@ -19,20 +19,54 @@ class SolrTest extends PHPUnit_Framework_TestCase
 
     public function testInitializationReturnsServiceSolr()
     {
-        $options = array();
-        $resource = new \Zrt_Service_Solr($options);
-        $resource->setBootstrap($this->bootstrap);
-        $solarium = $resource->init();
-
-        $this->assertInternalType('ZRTSolarium_Registry', $solarium);
+        $options = array(
+            'solarium' => array(
+                'endpoint' => array(
+                    'aviso' => array(
+                        'host' => '127.0.0.1',
+                        'port' => 8080,
+                        'path' => '/solr',
+                        'core' => 'aviso',
+                        'timeout' => 5
+                    ),
+                    'ubigeo' => array(
+                        'host' => '127.0.0.1',
+                        'port' => 8080,
+                        'path' => '/solr',
+                        'core' => 'ubigeo',
+                        'timeout' => 5
+                    )
+                )
+            )
+        );
+        $service = new Zrt_Service_Solr($options);
+        $this->assertNotNull($service);
     }
 
-    public function testInitializationInitializesSolr()
+    public function testSolrResponsePing()
     {
-        $options = array();
-
-        $resource = new Zrt_Service_Solr($options);
-        $resource->setBootstrap($this->bootstrap);
-        $resource->init();
+        $options = array(
+            'solarium' => array(
+                'endpoint' => array(
+                    'aviso' => array(
+                        'host' => '127.0.0.1',
+                        'port' => 8080,
+                        'path' => '/solr',
+                        'core' => 'aviso',
+                        'timeout' => 5
+                    ),
+                    'ubigeo' => array(
+                        'host' => '127.0.0.1',
+                        'port' => 8080,
+                        'path' => '/solr',
+                        'core' => 'ubigeo',
+                        'timeout' => 5
+                    )
+                )
+            )
+        );
+        $service = new Zrt_Service_Solr($options);
+        $this->assertNotEmpty($service->getPing());
     }
+
 }
