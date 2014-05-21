@@ -1,5 +1,5 @@
 {
-	"name": "ZrtLab/zend-service-solr",
+	"name": "zrt-lab/zend-service-solr",
 	"description": "Zend Framework 1 Solr package",
 	"keywords": [
         "framework",
@@ -18,7 +18,7 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/ZrtLab/zrtlab-service-solr",
+    "homepage": "https://github.com/zrtlab/zrtlab-service-solr",
     "license": "BSD-3-Clause",
     "require": {
         "php": ">=5.2.11",
