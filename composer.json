@@ -6,13 +6,12 @@
         "zf1",
         "zend",
         "service",
-		"solr"
-
+        "solr"
     ],
-		"config": {
-    	"process-timeout": 5000
+    "config": {
+        "process-timeout": 5000
     },
-	"authors": [
+    "authors": [
         {
             "name": "Luis Alberto Mayta",
             "email": "slovacus@gmail.com",
@@ -24,14 +23,20 @@
     "require": {
         "php": ">=5.2.11",
         "bombayworks/zendframework1": "1.*",
-		"solarium/solarium": "3.2.0"
+        "solarium/solarium": "3.2.0"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "dev-master",
+        "phpunit/phpunit": "4.1.0",
+        "phpunit/dbunit": "*",
+        "fabpot/php-cs-fixer": "dev-master"
     },
     "autoload": {
         "psr-0": {
             "Zrt_Service_Solr": "library/"
         }
     },
-	"config": {
+    "config": {
         "bin-dir": "vendor/bin/"
     }
 }
