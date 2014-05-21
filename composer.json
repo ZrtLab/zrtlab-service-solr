@@ -1,5 +1,5 @@
 {
-	"name": "zrt-lab/zend-service-solr",
+	"name": "zrt-lab/zrt-service-solr",
 	"description": "Zend Framework 1 Solr package",
 	"keywords": [
         "framework",
