@@ -23,7 +23,7 @@
     "require": {
         "php": ">=5.3.3",
         "bombayworks/zendframework1": "1.*",
-        "solarium/solarium": "3.2.0"
+        "solarium/solarium": "3.*"
     },
     "require-dev": {
         "fzaninotto/faker": "dev-master",
