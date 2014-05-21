@@ -20,7 +20,7 @@ class SolrTest extends PHPUnit_Framework_TestCase
     public function testInitializationReturnsServiceSolr()
     {
         $options = array();
-        $resource = new Solr($options);
+        $resource = new \Zrt_Service_Solr($options);
         $resource->setBootstrap($this->bootstrap);
         $solarium = $resource->init();
 
@@ -31,7 +31,7 @@ class SolrTest extends PHPUnit_Framework_TestCase
     {
         $options = array();
 
-        $resource = new Solr($options);
+        $resource = new Zrt_Service_Solr($options);
         $resource->setBootstrap($this->bootstrap);
         $resource->init();
     }

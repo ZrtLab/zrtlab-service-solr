@@ -36,6 +36,11 @@
             "Zrt_Service_Solr": "library/"
         }
     },
+    "autoload-dev": {
+        "psr-0": {
+            "Zrt\\Tests": "library/tests/Zrt/"
+        }
+    },
     "config": {
         "bin-dir": "vendor/bin/"
     }

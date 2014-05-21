@@ -15,17 +15,8 @@ class Bootstrap
     public static function init()
     {
         $loader = static::initAutoloader();
-        Zend_Loader_AutoloaderFactory::factory(
-            array(
-                'Zend_Loader_StandardAutoloader' => array(
-                    'autoregister_zf' => true,
-                    'namespaces' => array(
-                        'Zrt' => dirname(__FILE__) . '/../src/Zrt',
-                    )
-                )
-            )
-        );
-
+        $loader = Zend_Loader_Autoloader::getInstance();
+        $loader->registerNamespace('Zrt_');
     }
 
     protected static function initAutoloader()
